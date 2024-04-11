@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Media</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Media</h1>
+
+            <p>Digite dois numeros para saber a media entre eles</p>
+
+            <label for="txt1">Numero 1 :</label><input type="text" id="caixaNumero1">
+
+            <label for="txt1">Numero 2 :</label><input type="text" id="caixaNumero2">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var caixaTxt1 = document.getElementById("caixaNumero1").value;
+
+            var caixaTxt2 = document.getElementById("caixaNumero2").value;
+
+
+            var numero1 = parseFloat(caixaTxt1);
+
+            var numero2 = parseFloat(caixaTxt2);
+
+            var soma = numero1 + numero2;
+
+            var media = soma / 2;
+
+            alert("A media entre os numeros é  " + media);
+
+        }
+
+    </script>
+
+</body>
+</html>

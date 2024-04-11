@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Numeros primos</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Numeros primos</h1>
+
+            <p>Digite um valor para ver os numeros primos</p>
+
+            <label for="txt1">Digite um valor:</label><input type="text" id="valor">
+            
+            
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var fimtxt = document.getElementById("valor").value;
+
+            var fim = parseInt(fimtxt);
+
+            var mensagem = "Os números primos são: \r";
+
+            for (var i = 2; i <= fim; i++) {
+
+                var primo = true;
+
+                var numero = i;
+
+                for (var j = 2; j < numero; j++) {
+
+                    var resto = numero % 2;
+
+                    if (resto == 0) {
+                        primo = false; 
+                    }
+                }
+                if (primo) {
+                    mensagem += numero + "\r"; 
+                }
+            }
+
+            alert(mensagem);
+
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Classificação de glicose</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Classificação de glicose</h1>
+
+
+            <label for="txt1">Digite a quantidade de glicose</label><input type="number" id="caixaDeTexto">
+            
+
+            <button onclick="botao_click()">Classificar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var glicosePaciente = document.getElementById("caixaDeTexto").value;
+
+            var glicoseInformada = parseFloat(glicosePaciente);
+
+            if (glicoseInformada <= 100) {
+
+                alert("A glicose informada foi: " + glicoseInformada +  ", e está normal!");
+            }
+            else if (glicoseInformada > 100 && glicoseInformada <= 140) {
+
+                alert("A glicose informada foi: " + glicoseInformada +  ", e está elevada!");
+            }
+            else if (glicoseInformada > 140) {
+
+                alert(" A glicose informada foi: " + glicoseInformada + ", e você está com diabetes!" );
+            }
+
+        }   
+
+    </script>
+
+</body>
+</html>

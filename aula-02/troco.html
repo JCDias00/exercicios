@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Calcular Troco</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Calcular o troco</h1>
+
+            <p>Insira os dados abaixo para calcular o troco: </p>
+
+            <label for="txt1">Preço Unitario:</label><input type="number" id="numero1">
+
+            <label for="txt1">Quantidade:</label><input type="number" id="numero2">
+
+            <label for="txt1">Dinheiro:</label><input type="number" id="numero3">
+
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var number1 = document.getElementById("numero1").value;
+
+            var number2 = document.getElementById("numero2").value;
+
+            var number3 = document.getElementById("numero3").value;
+
+            var preco = parseFloat(number1);
+
+            var quantidade = parseFloat(number2);
+
+            var dinheiro = parseFloat(number3);
+
+            var total = preco * quantidade;
+
+            var troco = dinheiro - total;
+
+            var mensagem = "Total da compra: R$" + total +  " .O troco é de R$ " + troco;
+
+            alert(mensagem); 
+
+        }
+
+    </script>
+
+</body>
+</html>

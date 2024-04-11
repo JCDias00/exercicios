@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Pagamento</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Pagamento</h1>
+
+            <p>Insira os dados abaixo para calcular o pagamento: </p>
+
+            
+
+            <label for="txt1">Qual o nome do funcionario? :</label> <input type="text" id="txt1">
+
+            <label for="txt1">Qual o valor da hora trabalhada? :</label> <input type="number" id="numero1">
+
+            <label for="txt1">Total de horas trabalhadas:</label> <input type="number" id="numero2">
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var funcionario = document.getElementById("txt1").value;
+
+            var number1 = document.getElementById("numero1").value;
+
+            var number2 = document.getElementById("numero2").value;
+
+            var valorHoras = parseFloat(number1);
+
+            var totalHoras = parseFloat(number2);
+
+            var pagamento = valorHoras * totalHoras;
+
+            var mensagem = "O funcionario  " + funcionario + ", deve receber R$ " + pagamento;
+
+            alert(mensagem); 
+
+        }
+
+    </script>
+
+</body>
+</html>
